@@ -5,49 +5,49 @@ This chart illustrates the high-level architecture of the telecom fraud detectio
 ```mermaid
 flowchart TD
     subgraph "Data Sources"
-        CDR["Call Detail Records\n(Telecom Switches)"]
-        SIG["Signaling Data\n(SS7, Diameter, SIP Gateways)"]
-        NET["Network Logs\n(Network Monitoring Tools)"]
-        CUST["Customer Profiles\n(CRM Systems)"]
-        HIST["Historical Fraud Cases\n(Data Warehouses)"]
+        CDR["Call Detail Records (Telecom Switches)"]
+        SIG["Signaling Data (SS7, Diameter, SIP Gateways)"]
+        NET["Network Logs (Network Monitoring Tools)"]
+        CUST["Customer Profiles (CRM Systems)"]
+        HIST["Historical Fraud Cases (Data Warehouses)"]
     end
 
     subgraph "Data Ingestion Layer"
-        KAFKA["Kafka/Pulsar Streaming\n(Real-time ingestion)"]
-        BATCH["Batch Processing\n(Apache Spark, HDFS/S3)"]
+        KAFKA["Kafka/Pulsar Streaming (Real-time ingestion)"]
+        BATCH["Batch Processing (Apache Spark, HDFS/S3)"]
     end
 
     subgraph "Data Processing Layer"
-        SPARK["Spark/Flink Processing\n(Distributed data processing)"]
-        FEAT["Feature Engineering\n(Python, PySpark)"]
-        STORE["Feature Store\n(Feast, Redis)"]
+        SPARK["Spark/Flink Processing (Distributed data processing)"]
+        FEAT["Feature Engineering (Python, PySpark)"]
+        STORE["Feature Store (Feast, Redis)"]
     end
 
     subgraph "AI/ML Layer"
-        ANOM["Anomaly Detection\n(Isolation Forest, Scikit-learn)"]
-        PRED["Predictive Models\n(XGBoost, LightGBM)"]
-        GRAPH["Graph Analysis\n(Neo4j, PyTorch Geometric)"]
-        DL["Deep Learning\n(TensorFlow, PyTorch)"]
-        RL["Reinforcement Learning\n(Custom Python)"]
+        ANOM["Anomaly Detection (Isolation Forest, Scikit-learn)"]
+        PRED["Predictive Models (XGBoost, LightGBM)"]
+        GRAPH["Graph Analysis (Neo4j, PyTorch Geometric)"]
+        DL["Deep Learning (TensorFlow, PyTorch)"]
+        RL["Reinforcement Learning (Custom Python)"]
     end
 
     subgraph "Decision Layer"
-        RULES["Rule Engine\n(Custom Python)"]
-        SCORE["Risk Scoring\n(Custom algorithms)"]
-        ALERT["Alert Generation\n(FastAPI)"]
+        RULES["Rule Engine (Custom Python)"]
+        SCORE["Risk Scoring (Custom algorithms)"]
+        ALERT["Alert Generation (FastAPI)"]
     end
 
     subgraph "Action Layer"
-        BLOCK["Call/Transaction Blocking\n(Real-time API)"]
-        FLAG["Account Flagging\n(Database systems)"]
-        NOTIFY["Notification System\n(gRPC, Kafka)"]
-        CASE["Case Management\n(Custom web application)"]
+        BLOCK["Call/Transaction Blocking (Real-time API)"]
+        FLAG["Account Flagging (Database systems)"]
+        NOTIFY["Notification System (gRPC, Kafka)"]
+        CASE["Case Management (Custom web application)"]
     end
 
     subgraph "Monitoring & Feedback"
-        DASH["Dashboards\n(Grafana)"]
-        METRICS["Performance Metrics\n(Prometheus)"]
-        FEEDBACK["Feedback Loop\n(MLflow)"]
+        DASH["Dashboards (Grafana)"]
+        METRICS["Performance Metrics (Prometheus)"]
+        FEEDBACK["Feedback Loop (MLflow)"]
     end
 
     CDR & SIG & NET & CUST & HIST --> KAFKA & BATCH
