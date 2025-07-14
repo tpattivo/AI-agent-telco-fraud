@@ -9,6 +9,8 @@ The project is currently in the initial planning and architecture design phase. 
 3. Outlined the high-level system architecture and component interactions
 4. Selected the primary technologies and frameworks to be used
 5. Created a detailed implementation plan with phased approach
+6. Defined guarantee conditions for project success (both business and technical)
+7. Created a comprehensive project folder structure
 
 ## Recent Changes
 
@@ -17,6 +19,10 @@ The project is currently in the initial planning and architecture design phase. 
 - Selected containerization approach for deployment flexibility
 - Outlined the ML model approaches for each fraud type
 - Created memory bank for project knowledge management
+- Created business-oriented guarantee conditions document
+- Created technical guarantee conditions document for developers
+- Defined detailed project folder structure
+- Created project README
 
 ## Next Steps
 
@@ -39,7 +45,9 @@ The project is currently in the initial planning and architecture design phase. 
    - Establish feedback loops for continuous improvement
 
 4. **Immediate Tasks**
+   - Create the initial project structure according to the defined folder structure
    - Set up project repository and CI/CD pipeline
    - Create development environment configuration
    - Implement Kafka-based data ingestion prototype
    - Develop initial feature extraction for IRSF detection
+   - Ensure all guarantee conditions are communicated to Company M
